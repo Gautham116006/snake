@@ -45,12 +45,13 @@ class Apple:
         # end if
 
         self.APPLE_RECT = pygame.Rect(self.APPLE_X, self.APPLE_Y, self.APPLE_SIZE, self.APPLE_SIZE)
-        pygame.draw.rect(self.SURFACE, "white", self.APPLE_RECT)
+        pygame.draw.rect(self.SURFACE, "red", self.APPLE_RECT)
         # end if
-        if self.APPLE_RECT.colliderect(Snake.SNAKE_HEAD):
+        if self.APPLE_RECT.colliderect(Snake.SNAKE_HEAD.get_rect_object()):
             self.APPLE_SPAWNED = False
             self.spawn_apple()
             Snake.grow_snake()
+            print(Snake.SNAKE_BODY)
         # end if
 
     # end def_spawn_apple
