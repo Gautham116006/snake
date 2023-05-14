@@ -51,7 +51,6 @@ class Apple:
             self.APPLE_SPAWNED = False
             self.spawn_apple()
             Snake.grow_snake()
-            print(Snake.SNAKE_BODY)
         # end if
 
     # end def_spawn_apple
